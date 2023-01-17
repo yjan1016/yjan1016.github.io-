@@ -239,9 +239,11 @@ mark {
 .container .row {
     margin-bottom: 0;
 }
-
+/* 整体背景颜色，包括导航、移动端的导航、页尾、标签页等的背景颜色. */
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    /*background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);*/
+    background-image: linear-gradient(to right, black 0%, gray  100%);/*gray #B3DCFF*//*#9EC2E0 #AAD1F2*/
+    /*background:#000B3F;*/
 }
 
 .text-color {
@@ -593,6 +595,8 @@ header .go-back i {
     font-weight: 400;
 }
 
+/* 动态切换背景颜色. */
+/*
 @-webkit-keyframes rainbow {
 
     0%,
@@ -684,7 +688,7 @@ header .go-back i {
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
     }
 }
-
+*/
 .index-card {
     margin-top: -10px;
     padding-top: 20px;
