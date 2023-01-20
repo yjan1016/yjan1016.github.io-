@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+
+	<head>
+
+		<meta charset="UTF-8" />
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+		<title>(●'◡'●)</title>
+		<link rel="icon" type="image/png" href="./images/favicon.png">
+
+		<meta name="description" content="Thumbnail Pile Effect with Automatic Grouping" />
+
+		<meta name="keywords" content="jquery, pile, effect, images, grid, thumbnails, css3, grouping, albums" />
+
+		<meta name="author" content="Codrops" />
+
+		<!--<link rel="shortcut icon" href="../favicon.ico"> -->
+
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+
+		<link rel="stylesheet" type="text/css" href="css/stapel.css" />
+
+		<link rel="stylesheet" type="text/css" href="css/custom.css" />
+
+		<script src="js/modernizr.custom.63321.js"></script>
+
+		<!--[if lte IE 7]><style>.support-note .note-ie{display:block;}</style><![endif]-->
+
+	</head>
+
+	<body>
+
+		<div class="container">	
+
+
+
+			<!-- Codrops top bar --><!--/ Codrops top bar -->
+
+			
+
+			<header class="clearfix">
+
+			
+
+				<h1>This is my photo album📷 <span>with automatic grouping | Album 1: default settings</span></h1>
+
+				
+
+				<nav class="codrops-demos">
+
+					<a class="current-demo" href="index.html">Album 1</a>
+
+					<a href="index2.html">Album 2</a>
+
+					<a href="index3.html">Album 3</a>
+
+				</nav>
+
+
+
+				<div class="support-note">
+
+					<span class="note-ie">Sorry, only modern browsers.</span>
+
+				</div>
+
+				
+
+			</header>
+
+			
+
+			<section class="main">
+
+				
+
+				<div class="wrapper">
+
+
+
+					<div class="topbar">
+
+						<span id="close" class="back">&larr;[back]</span>
+
+						<h2>Photo Album📷</h2><h3 id="name">PA1</h3>
+
+					</div>
+
+					
+
+					<ul id="tp-grid" class="tp-grid">
+
+
+
+						<!-- Bryan Moats -->
+
+						<li data-pile="Bryan Moats">
+
+							<a href="http://drbl.in/cmVe">
+
+								<span class="tp-info"><span>Flu &amp; You</span></span>
+
+								<img src="images/1/1.jpg" />
+
+							</a>
+
+						</li>
+
+						<li data-pile="Bryan Moats">
+
+							<a href="http://drbl.in/cmhM">
+
+								<span class="tp-info"><span>Test Your Flu IQ</span></span>
+
+								<img src="images/1/2.jpg" />
+
+							</a>
+
+						</li>
+
+						<li data-pile="Bryan Moats">
+
+							<a href="http://drbl.in/eKdt">
+
+								<span class="tp-info"><span>Unexpected Fatherly Faces and Feelings</span></span>
+
+								<img src="images/1/3.jpg" />
+
+							</a>
+
+						</li>
+
+
+
+						<!-- Mike Dornseif -->
+
+						<li data-pile="Mike Dornseif">
+
+							<a href="http://drbl.in/eiUm">
+
+								<span class="tp-info"><span>On to Easter</span></span>
+
+								<img src="images/2/1.jpg" />
+
+							</a>
+
+						</li>
+
+						<li data-pile="Mike Dornseif">
+
+							<a href="http://drbl.in/ekMY">
+
+								<span class="tp-info"><span>Love Birds</span></span>
+
+								<img src="images/2/2.jpg" />
+
+							</a>
+
+						</li>
+
+						<li data-pile="Mike Dornseif">
+
+							<a href="http://drbl.in/esQV">
+
+								<span class="tp-info"><span>Here Fishy fishy</span></span>
+
+								<img src="images/2/3.jpg" />
+
+							</a>
+
+						</li>
+
+
+
+						<!-- Griffin Moore -->
+
+						<li data-pile="Griffin Moore">
+
+							<a href="http://drbl.in/fzUB">
+
+								<span class="tp-info"><span>Briefcase</span></span>
+
+								<img src="images/3/1.jpg" />
+
+							</a>
+
+						</li>
+
+						<li data-pile="Griffin Moore">
+
+							<a href="http://drbl.in/fQEv">
+
+								<span class="tp-info"><span>Clipboard</span></span>
+
+								<img src="images/3/2.jpg" />
+
+							</a>
+
+						</li>
+
+						<li data-pile="Griffin Moore">
+
+							<a href="http://drbl.in/fREU">
+
+								<span class="tp-info"><span>Sweet pack</span></span>
+
+								<img src="images/3/3.jpg" />
+
+							</a>
+
+						</li>
+
+
+
+						<!-- Andrea Austoni -->
+
+						<li data-pile="Andrea Austoni">
+
+							<a href="http://drbl.in/cyWa">
+
+								<span class="tp-info"><span>Growth in 2012 (Holiday Card)</span></span>
+
+								<img src="images/4/1.jpg" />
+
+							</a>
+
+						</li>
+
+						<li data-pile="Andrea Austoni">
+
+							<a href="http://drbl.in/cRkb">
+
+								<span class="tp-info"><span>Grady Wilson</span></span>
+
+								<img src="images/4/2.jpg" />
+
+							</a>
+
+						</li>
+
+						<li data-pile="Andrea Austoni">
+
+							<a href="http://drbl.in/cSKM">
+
+								<span class="tp-info"><span>More Cowbell</span></span>
+
+								<img src="images/4/3.jpg" />
+
+							</a>
+
+						</li>
+
+						<!-- 海南大学 -->
+
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2021-08-30</span></span>
+								<img src="images/hnu/1.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-05-26</span></span>
+								<img src="images/hnu/2.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-06-12</span></span>
+								<img src="images/hnu/3.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-05-27</span></span>
+								<img src="images/hnu/4.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-05-23</span></span>
+								<img src="images/hnu/5.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-05-26</span></span>
+								<img src="images/hnu/6.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-06-19</span></span>
+								<img src="images/hnu/7.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2021-09-07</span></span>
+								<img src="images/hnu/8.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-06-19</span></span>
+								<img src="images/hnu/9.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-06-27</span></span>
+								<img src="images/hnu/10.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2021-09-02</span></span>
+								<img src="images/hnu/11.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2021-05-13</span></span>
+								<img src="images/hnu/12.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2021-10-12</span></span>
+								<img src="images/hnu/13.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2021-09-22</span></span>
+								<img src="images/hnu/14.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2021-09-02</span></span>
+								<img src="images/hnu/15.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2021-10-12</span></span>
+								<img src="images/hnu/16.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-05-12</span></span>
+								<img src="images/hnu/17.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-04-23</span></span>
+								<img src="images/hnu/18.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-05-12</span></span>
+								<img src="images/hnu/19.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2021-09-05</span></span>
+								<img src="images/hnu/20.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-09-25</span></span>
+								<img src="images/hnu/21.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2021-11-05</span></span>
+								<img src="images/hnu/22.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-04-30</span></span>
+								<img src="images/hnu/23.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-04-26</span></span>
+								<img src="images/hnu/24.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2021-09-17</span></span>
+								<img src="images/hnu/25.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-04-27</span></span>
+								<img src="images/hnu/26.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-05-13</span></span>
+								<img src="images/hnu/27.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2021-10-12</span></span>
+								<img src="images/hnu/28.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-05-13</span></span>
+								<img src="images/hnu/29.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-05-05</span></span>
+								<img src="images/hnu/30.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-06-19</span></span>
+								<img src="images/hnu/31.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-05-12</span></span>
+								<img src="images/hnu/32.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2021-09-25</span></span>
+								<img src="images/hnu/33.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-05-26</span></span>
+								<img src="images/hnu/34.jpeg" width="250"/>
+							</a>
+						</li>
+						<li data-pile="hnu">
+							<a href="index.html">
+								<span class="tp-info"><span>2022-05-26</span></span>
+								<img src="images/hnu/35.jpeg" width="250"/>
+							</a>
+						</li>
+					</ul>
+
+				</div>
+
+			</section>
+
+
+
+		</div><!-- /container -->
+
+		<script src="http://www.jq22.com/jquery/1.7.2/jquery.min.js"></script>
+
+		<script type="text/javascript" src="js/jquery.stapel.js"></script>
+
+		<script type="text/javascript">	
+
+			$(function() {
+
+
+
+				var $grid = $( '#tp-grid' ),
+
+					$name = $( '#name' ),
+
+					$close = $( '#close' ),
+
+					$loader = $( '<div class="loader"><i></i><i></i><i></i><i></i><i></i><i></i><span>Loading...</span></div>' ).insertBefore( $grid ),
+
+					stapel = $grid.stapel( {
+
+						onLoad : function() {
+
+							$loader.remove();
+
+						},
+
+						onBeforeOpen : function( pileName ) {
+
+							$name.html( pileName );
+
+						},
+
+						onAfterOpen : function( pileName ) {
+
+							$close.show();
+
+						}
+
+					} );
+
+
+
+				$close.on( 'click', function() {
+
+					$close.hide();
+
+					$name.empty();
+
+					stapel.closePile();
+
+				} );
+
+
+
+			} );
+
+		</script>
+
+
+
+
+	</body>
+
+</html>
+

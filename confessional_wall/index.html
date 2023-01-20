@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表白墙</title>
+<link rel="icon" type="image/png" href="/favicon.png">
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background: url("imgs/bg.gif");
+        font-size: 12px;
+    }
+
+    .content {
+        position: relative;
+        width: 960px;
+        height: 700px;
+        margin: 0 auto;
+        background: url("imgs/content_bg.jpg");
+    }
+
+    .wishingWall {
+        position: absolute;
+        width: 227px;
+    }
+
+    .tip2 {
+
+    }
+
+    span {
+        display: block;
+    }
+
+    .tip1 {
+        position: relative;
+        height: 25px;
+        padding-top: 43px;
+        background: url("imgs/tip1_h.gif");
+    }
+
+    .tip1 span {
+        padding-left: 10px;
+    }
+
+    .tip1 s {
+        text-decoration: none;
+        position: absolute;
+        top: 45px;
+        right: 10px;
+        width: 15px;
+        height: 15px;
+        text-align: center;
+        font: 600 12px/15px "simsun";
+        cursor: pointer;
+    }
+
+    .tip2 {
+        background: url("imgs/tip1_c.gif");
+        max-height: 160px;
+        overflow: hidden;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 20px;
+    }
+
+    .tip3 {
+        height: 53px;
+        padding-top: 20px;
+        background: url("imgs/tip1_f.gif");
+    }
+
+    .tip3 .icon {
+        padding-left: 10px;
+    }
+
+    .tip3 span {
+        display: inline-block;
+        float: right;
+        font-size: 14px;
+        margin-top: 5px;
+        margin-right: 16px;
+        color: #C0F;
+    }
+</style>
+<body>
+<div class="content">
+    
+</div>
+<script>
+    //模拟数据库，获取信息
+    var messages = [
+        {"id": 1, "name": "镜眠", "content": "前路太漫长，有你才无妨…", "time": "2022-02-17 10:00:00"},
+        {"id": 2, "name": "Jarmuth", "content": "爱是一种感情，一种感觉，人们常将其和其他转瞬即逝的情感混淆。选择是伴随着承诺而来的。你可以选择爱而不承诺，也可以选择承诺而不爱。前者不会长久，后者却可维持下去。但爱的同时付出承诺，才是最完美的结果。", "time": "2020‐10‐08 07:47:00"},
+        {"id": 3, "name": "Jarmuth", "content": "甲不喜欢吃鸡蛋，每次发了鸡蛋都给乙吃。刚开始乙很感谢，久而久之便习惯了。习惯了，便理所当然了。于是，直到有一天，甲将鸡蛋给了丙，乙就不爽了。她忘记了这个鸡蛋本来就是甲的，甲想给谁都可以。为此，她们大吵一架，从此绝交...", "time": "2020‐11‐08 07:47:00"},
+        {"id": 4, "name": "Jarmuth", "content": "能走过1年不容易；能坚持2年值得珍惜；能相守3年堪称奇迹；能熬5年的才叫知己；10年依旧还在的，应该请进生命里；20年不离不弃的，就是你的后天亲人。", "time": "2020‐11‐18 17:47:00"},
+        {"id": 5, "name": "林徽因", "content": "终于明白，有些路，只能一个人走。那些邀约好同行的人，一起相伴雨季，走过年华，但有一天终究会在某个渡口离散。红尘陌上，独自行走，绿萝拂过衣襟，青云打湿诺言。山和水可以两两相忘，日与月可以毫无瓜葛。那时候，只一个人的浮世清欢，一个人的细水长流。", "time": "2016-02-22 12:40:00"},
+        {"id": 6, "name": "渐行渐远", "content": "记忆如线,时间如剑。线断总因无情剑。穿针引线,经年往事难再现。人总在行走，何必回首？", "time": "2016-02-22 01:30:00"},
+        {
+            "id": 7,
+            "name": "Hakutaku",
+            "content": "我把这片四叶草夹进了书里，同时，我也把对你的那份喜欢夹进了我的心里",
+            "time": "2019-12-22 01:30:00"
+        },
+        {"id": 8, "name": "《半暖时光》", "content": "一段感情的开始，需要两个人的同意，可一段感情的结束，只要一个人决定。", "time": "2016-02-22 01:30:00"},
+        {"id": 9, "name": "The Promise", "content": "有些人是无法带走的，他们走着走着，就没有了脚，于是只能化作一帧风景，留在过去的某个时间里。", "time": "2016-02-22 02:30:00"},
+        {"id": 10, "name": "1016", "content": "Sunshine with you is what I want in the future.", "time": "2023-02-22 02:30:00"},
+        {"id": 11, "name": "1306", "content": "Meet you in winter, winter is gone, the stars are bright.", "time": "2023-01-22 02:30:00"},
+        {"id": 12, "name": "1306", "content": "ᴵ ʷᵃⁱᵗ ᶠᵒʳ ᵗʰᵉ ˢᵗᵃʳˢ ᵗᵒ ᶠᵃˡˡ ᵃⁿᵈ ᵖⁱᵉᶜᵉ ᵗᵒᵍᵉᵗʰᵉʳ ᵃ ᶠᵘᵗᵘʳᵉ ʷⁱᵗʰ ʸᵒᵘ.✨我等星辰落满怀，拼凑个有你的未来。", "time": "2023-01-12 07:30:00"},
+        {"id": 13, "name": "1306", "content": "The world is a large - scale clip. I just want you to be in a glass window.世界就是一个大型夹娃娃机 我隔着玻璃窗 只想要你", "time": "2023-01-12 07:30:00"},
+        {"id": 14, "name": "1306", "content": "在這橫衝直撞的青春裡，願你簡單也瘋狂", "time": "2023-01-12 07:30:00"},
+        {"id": 15, "name": "花魂", "content": "あなたを待(ま)っています(我会等你的)", "time": "2023-01-12 07:30:00"},
+        {"id": 16, "name": "小一", "content": "書き尽くし千山，落筆はあなた(写尽千山，落笔是你)", "time": "2023-01-12 07:30:00"},
+        {"id": 17, "name": "千羽鹤", "content": "私はあなたがとても好きです(我非常喜欢你)", "time": "2023-01-12 07:30:00"},
+        {"id": 18, "name": "千羽鹤", "content": "你是年少的欢喜，倒过来，也亦然。", "time": "2023-01-12 07:30:00"},        
+    ];
+    var content = document.getElementsByClassName("content")[0];
+
+    for (var i = 0; i < messages.length; i++) {
+        content.innerHTML += '<div class="wishingWall">' +
+            '<div class="tip1">' +
+            '<span>' + messages[i].time + '</span>' +
+            '<s>×</s>' +
+            '</div>' +
+            '<span class="tip2">' + messages[i].content + '</span>' +
+            '<span class="tip3">' +
+            '<img src="imgs/bpic_1.gif" class="icon">' +
+            '<span>' + messages[i].name + '</span>' +
+            '</span>' +
+            '</div>';
+    }
+    var divEles = content.children;
+    var zIndexValue = 0;
+    for (var i = 0; i < divEles.length; i++) {
+        divEles[i].style.top = randomTop() + "px";
+        divEles[i].style.left = randomLeft() + "px";
+        divEles[i].onclick = function () {
+            zIndexValue++;
+            this.style.zIndex = zIndexValue;
+        }
+        var closeEle = divEles[i].getElementsByTagName("s")[0];
+        closeEle.onclick = function () {
+            content.removeChild(this.parentNode.parentNode);
+        }
+    }
+
+    function randomTop() {
+        return parseInt(Math.random() * (627 - 257));
+    }
+
+    function randomLeft() {
+        return parseInt(Math.random() * (960 - 231));
+    }
+</script>
+</body>
+</html>
