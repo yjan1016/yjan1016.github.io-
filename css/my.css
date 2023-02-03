@@ -1,21 +1,19 @@
 /* Here is your custom css styles. */
 @font-face{
-    font-family: '方正行黑简体';
+    font-family:'方正行黑简体';
     src: url('../font/A73方正行黑简体.ttf');
 }
  
 body{
     font-family: '方正行黑简体';
 }
-
-.fa-heart { 
-  /* 设置心的大小 */ 
-  /*font-size: 14px;*/
-  /* 设置心的颜色 */ 
-  color: rgba(255, 0, 0, 0.5);
-  animation: donghua 
-  /*调整第一个值可以调整跳动速度*/ 
-    500ms 0ms infinite linear reverse 
+/*
+.fa-heartbeat { 
+  /*font-size: 14px;*//*设置心的大小 */ 
+  /*color: rgba(255, 0, 0, 0.5);/* 设置心的颜色 */ 
+  /*animation: donghua /*调整第一个值可以调整跳动速度*/ 
+  /*500ms 0ms infinite linear reverse 
 } 
 @keyframes donghua {
   from {font-size: 10px; } to { font-size: 18px; } }
+*/

@@ -169,3 +169,14 @@ $(function () {
     // 初始化加载 tooltipped.
     $('.tooltipped').tooltip();
 });
+
+//黑夜模式提醒开启功能 源: View Room 文章作者: Ruins
+setTimeout(function () {
+  if (
+    (new Date().getHours() >= 20 || new Date().getHours() < 7) &&
+    !$("body").hasClass("DarkMode")
+  ) {
+    document.body.classList.add("DarkMode");
+    $("#sum-moon-icon").addClass("fa-sun").removeClass("fa-moon");
+  }
+}, 2000);
